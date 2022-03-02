@@ -1,17 +1,14 @@
 package com.example.navigationdrawertest
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import com.example.navigationdrawertest.databinding.FragmentGalleryBinding
+import com.example.navigationdrawertest.databinding.FragmentBlueBinding
 
-class GalleryFragment : Fragment() {
-
-    private var _binding: FragmentGalleryBinding? = null
+class BlueFragment : Fragment() {
+    private var _binding: FragmentBlueBinding? = null
 
     private val binding get() = _binding!!
 
@@ -21,10 +18,8 @@ class GalleryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-
-        _binding = FragmentGalleryBinding.inflate(inflater, container, false)
+        _binding = FragmentBlueBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
 
         return root
     }

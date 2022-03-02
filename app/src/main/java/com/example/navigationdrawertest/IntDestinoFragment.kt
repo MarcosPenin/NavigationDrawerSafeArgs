@@ -1,17 +1,15 @@
 package com.example.navigationdrawertest
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import com.example.navigationdrawertest.databinding.FragmentSlideshowBinding
+import com.example.navigationdrawertest.databinding.FragmentIntDestinoBinding
+import com.example.navigationdrawertest.databinding.FragmentIntOrigenBinding
 
-class SlideshowFragment : Fragment() {
-
-    private var _binding: FragmentSlideshowBinding? = null
+class IntDestinoFragment : Fragment() {
+    private var _binding: FragmentIntDestinoBinding? = null
 
     private val binding get() = _binding!!
 
@@ -21,10 +19,8 @@ class SlideshowFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentSlideshowBinding.inflate(inflater, container, false)
+        _binding = FragmentIntDestinoBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-        val textView: TextView = binding.textSlideshow
 
         return root
     }

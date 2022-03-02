@@ -2,15 +2,12 @@ package com.example.navigationdrawertest
 
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuInflater
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import com.example.navigationdrawertest.databinding.ActivityMainBinding
@@ -34,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_home
             ), binding.drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

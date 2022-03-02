@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SafeArgsFragment">
+
+
+    <Button
+        android:id="@+id/buttonInt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pasar int"
+        app:layout_constraintBottom_toTopOf="@+id/buttonString"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonString"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pasar String"
+        app:layout_constraintBottom_toTopOf="@+id/buttonObject"
+        app:layout_constraintEnd_toEndOf="@+id/buttonInt"
+        app:layout_constraintStart_toStartOf="@+id/buttonInt"
+        app:layout_constraintTop_toBottomOf="@+id/buttonInt" />
+
+    <Button
+        android:id="@+id/buttonObject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pasar Objeto "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonInt"
+        app:layout_constraintStart_toStartOf="@+id/buttonInt"
+        app:layout_constraintTop_toBottomOf="@+id/buttonString" />
+</androidx.constraintlayout.widget.ConstraintLayout>

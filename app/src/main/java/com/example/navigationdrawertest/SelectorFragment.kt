@@ -4,15 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
-import com.example.navigationdrawertest.databinding.FragmentHomeBinding
+import com.example.navigationdrawertest.databinding.FragmentSelectorBinding
+import java.nio.channels.Selector
 
-class HomeFragment : Fragment() {
+class SelectorFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentSelectorBinding? = null
 
     private val binding get() = _binding!!
 
@@ -23,7 +22,7 @@ class HomeFragment : Fragment() {
     ): View {
 
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentSelectorBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         return root
@@ -33,13 +32,12 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val navController = Navigation.findNavController(view)
 
-        binding.button1.setOnClickListener{navController.navigate(HomeFragmentDirections.actionNavHomeToSelector())}
-        binding.button2.setOnClickListener{navController.navigate(HomeFragmentDirections.actionNavHomeToNavSafeargs())}
-
+        binding.blueselector.setOnClickListener{navController.navigate(SelectorFragmentDirections.actionSelectorToBlueFragment())}
+        binding.redselector.setOnClickListener{navController.navigate(SelectorFragmentDirections.actionSelectorToRedFragment())}
+        binding.greenselector.setOnClickListener{navController.navigate(SelectorFragmentDirections.actionSelectorToGreenFragment())}
 
 
     }
-
 
 
     override fun onDestroyView() {

@@ -11,22 +11,99 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_nav_home_to_nav_gallery"
-            app:destination="@id/nav_gallery" />
+            android:id="@+id/action_nav_home_to_selector"
+            app:destination="@id/selector" />
         <action
-            android:id="@+id/action_nav_home_to_nav_slideshow"
-            app:destination="@id/nav_slideshow" />
+            android:id="@+id/action_nav_home_to_nav_safeargs"
+            app:destination="@id/safeargs" />
     </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.navigationdrawertest.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/selector"
+        android:name="com.example.navigationdrawertest.SelectorFragment"
+        android:label="SafeArgs"
+        tools:layout="@layout/fragment_selector" >
+        <action
+            android:id="@+id/action_selector_to_blueFragment"
+            app:destination="@id/blueFragment" />
+        <action
+            android:id="@+id/action_selector_to_redFragment"
+            app:destination="@id/redFragment" />
+        <action
+            android:id="@+id/action_selector_to_greenFragment"
+            app:destination="@id/greenFragment" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.navigationdrawertest.SlideshowFragment"
+        android:id="@+id/safeargs"
+        android:name="com.example.navigationdrawertest.SafeArgsFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_safeargs" >
+        <action
+            android:id="@+id/action_safeargs_to_intOrigenFragment"
+            app:destination="@id/intOrigenFragment" />
+        <action
+            android:id="@+id/action_safeargs_to_stringOrigenFragment"
+            app:destination="@id/stringOrigenFragment" />
+        <action
+            android:id="@+id/action_safeargs_to_objectOrigenFragment"
+            app:destination="@id/objectOrigenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blueFragment"
+        android:name="com.example.navigationdrawertest.BlueFragment"
+        android:label="fragment_blue"
+        tools:layout="@layout/fragment_blue" />
+    <fragment
+        android:id="@+id/redFragment"
+        android:name="com.example.navigationdrawertest.RedFragment"
+        android:label="fragment_red"
+        tools:layout="@layout/fragment_red" />
+    <fragment
+        android:id="@+id/greenFragment"
+        android:name="com.example.navigationdrawertest.GreenFragment"
+        android:label="fragment_green"
+        tools:layout="@layout/fragment_green" />
+    <fragment
+        android:id="@+id/intOrigenFragment"
+        android:name="com.example.navigationdrawertest.IntOrigenFragment"
+        android:label="fragment_int_origen"
+        tools:layout="@layout/fragment_int_origen" >
+        <action
+            android:id="@+id/action_intOrigenFragment_to_intDestinoFragment"
+            app:destination="@id/intDestinoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/intDestinoFragment"
+        android:name="com.example.navigationdrawertest.IntDestinoFragment"
+        android:label="fragment_int_destino"
+        tools:layout="@layout/fragment_int_destino" />
+    <fragment
+        android:id="@+id/objectDestinoFragment"
+        android:name="com.example.navigationdrawertest.ObjectDestinoFragment"
+        android:label="fragment_object_destino"
+        tools:layout="@layout/fragment_object_destino" />
+    <fragment
+        android:id="@+id/objectOrigenFragment"
+        android:name="com.example.navigationdrawertest.ObjectOrigenFragment"
+        android:label="fragment_object_origen"
+        tools:layout="@layout/fragment_object_origen" >
+        <action
+            android:id="@+id/action_objectOrigenFragment_to_objectDestinoFragment"
+            app:destination="@id/objectDestinoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stringDestinoFragment"
+        android:name="com.example.navigationdrawertest.StringDestinoFragment"
+        android:label="fragment_string_destino"
+        tools:layout="@layout/fragment_string_destino" />
+    <fragment
+        android:id="@+id/stringOrigenFragment"
+        android:name="com.example.navigationdrawertest.StringOrigenFragment"
+        android:label="fragment_string_origen"
+        tools:layout="@layout/fragment_string_origen" >
+        <action
+            android:id="@+id/action_stringOrigenFragment_to_stringDestinoFragment"
+            app:destination="@id/stringDestinoFragment" />
+    </fragment>
 </navigation>
