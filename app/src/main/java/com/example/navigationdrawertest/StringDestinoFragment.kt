@@ -26,6 +26,21 @@ class StringDestinoFragment : Fragment() {
         return root
     }
 
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val argumentoRecibido =
+            StringDestinoFragmentArgs.fromBundle(requireArguments()).argumentoString
+        binding.texto.setText(argumentoRecibido.toString())
+
+
+    }
+
+
+
+
+
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

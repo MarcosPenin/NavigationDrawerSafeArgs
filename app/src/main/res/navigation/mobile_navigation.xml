@@ -37,7 +37,7 @@
     <fragment
         android:id="@+id/safeargs"
         android:name="com.example.navigationdrawertest.SafeArgsFragment"
-        android:label="@string/menu_slideshow"
+        android:label="Safeargs"
         tools:layout="@layout/fragment_safeargs" >
         <action
             android:id="@+id/action_safeargs_to_intOrigenFragment"
@@ -72,12 +72,23 @@
         <action
             android:id="@+id/action_intOrigenFragment_to_intDestinoFragment"
             app:destination="@id/intDestinoFragment" />
+
+
+
     </fragment>
     <fragment
         android:id="@+id/intDestinoFragment"
         android:name="com.example.navigationdrawertest.IntDestinoFragment"
         android:label="fragment_int_destino"
-        tools:layout="@layout/fragment_int_destino" />
+        tools:layout="@layout/fragment_int_destino" >
+        <argument
+            android:name="argumento_int"
+            app:argType="integer"
+            android:defaultValue="42"/>
+    </fragment>
+
+
+
     <fragment
         android:id="@+id/objectDestinoFragment"
         android:name="com.example.navigationdrawertest.ObjectDestinoFragment"
@@ -96,7 +107,17 @@
         android:id="@+id/stringDestinoFragment"
         android:name="com.example.navigationdrawertest.StringDestinoFragment"
         android:label="fragment_string_destino"
-        tools:layout="@layout/fragment_string_destino" />
+        tools:layout="@layout/fragment_string_destino" >
+        <argument
+            android:name="argumento_string"
+            app:argType="string"
+            android:defaultValue=" "/>
+</fragment>
+
+
+
+
+
     <fragment
         android:id="@+id/stringOrigenFragment"
         android:name="com.example.navigationdrawertest.StringOrigenFragment"

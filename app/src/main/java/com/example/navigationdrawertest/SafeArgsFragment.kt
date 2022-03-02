@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import com.example.navigationdrawertest.databinding.FragmentSafeargsBinding
 
 class SafeArgsFragment : Fragment() {
@@ -26,6 +27,16 @@ class SafeArgsFragment : Fragment() {
 
         return root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val navController = Navigation.findNavController(view)
+        binding.buttonInt.setOnClickListener{navController.navigate(SafeArgsFragmentDirections.actionSafeargsToIntOrigenFragment())}
+        binding.buttonString.setOnClickListener{navController.navigate(SafeArgsFragmentDirections.actionSafeargsToStringOrigenFragment())}
+        binding.buttonObject.setOnClickListener{navController.navigate(SafeArgsFragmentDirections.actionSafeargsToObjectOrigenFragment())}
+
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
