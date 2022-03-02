@@ -9,7 +9,7 @@
     >
 
     <Button
-        android:id="@+id/enviarInt"
+        android:id="@+id/enviarPersona"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ENVIAR OBJETO"
@@ -32,10 +32,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enviarInt" />
+        app:layout_constraintTop_toBottomOf="@+id/enviarPersona" />
 
     <EditText
-        android:id="@+id/editNombre2"
+        android:id="@+id/editApellido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -46,22 +46,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enviarInt"
+        app:layout_constraintTop_toBottomOf="@+id/enviarPersona"
         app:layout_constraintVertical_bias="0.145" />
 
     <EditText
-        android:id="@+id/editNombre3"
+        android:id="@+id/editEdad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="@color/white"
         android:ems="4"
-        android:inputType="text"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enviarInt"
+        app:layout_constraintTop_toBottomOf="@+id/enviarPersona"
         app:layout_constraintVertical_bias="0.279" />
 
 

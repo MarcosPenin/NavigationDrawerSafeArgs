@@ -93,7 +93,13 @@
         android:id="@+id/objectDestinoFragment"
         android:name="com.example.navigationdrawertest.ObjectDestinoFragment"
         android:label="fragment_object_destino"
-        tools:layout="@layout/fragment_object_destino" />
+        tools:layout="@layout/fragment_object_destino">
+        <argument
+            android:name="empleado"
+            app:argType="com.example.navigationdrawertest.Persona" />
+    </fragment>
+
+
     <fragment
         android:id="@+id/objectOrigenFragment"
         android:name="com.example.navigationdrawertest.ObjectOrigenFragment"
