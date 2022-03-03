@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/intOrigenFragment"
+
+        android:title="Pasar int" />
+
+    <item
+        android:id="@+id/stringOrigenFragment"
+        android:title="Pasar String" />
+
+    <item
+        android:id="@+id/objectOrigenFragment"
+
+        android:title="Pasar objeto" />
+
+</menu>
