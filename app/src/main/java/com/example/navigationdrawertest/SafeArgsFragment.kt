@@ -1,10 +1,9 @@
 package com.example.navigationdrawertest
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
@@ -35,6 +34,17 @@ class SafeArgsFragment : Fragment() {
         binding.buttonString.setOnClickListener{navController.navigate(SafeArgsFragmentDirections.actionSafeargsToStringOrigenFragment())}
         binding.buttonObject.setOnClickListener{navController.navigate(SafeArgsFragmentDirections.actionSafeargsToObjectOrigenFragment())}
 
+        registerForContextMenu(binding.buttonInt)
+    }
+
+    override fun onCreateContextMenu(
+        menu: ContextMenu,
+        v: View,
+        menuInfo: ContextMenu.ContextMenuInfo?
+    ) {
+        super.onCreateContextMenu(menu, v, menuInfo)
+        menu.setHeaderTitle("Pick option")
+        requireActivity().menuInflater.inflate(R.menu.menu_context2, menu)
     }
 
 

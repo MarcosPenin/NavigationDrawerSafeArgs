@@ -21,18 +21,19 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         return root
+
+
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val navController = Navigation.findNavController(view)
-
+        registerForContextMenu(binding.button1)
         binding.button1.setOnClickListener{navController.navigate(HomeFragmentDirections.actionNavHomeToSelector())}
         binding.button2.setOnClickListener{navController.navigate(HomeFragmentDirections.actionNavHomeToNavSafeargs())}
 
